@@ -1,0 +1,28 @@
+{
+    "name": "cleanstore/kkg",
+    "description": "Loja virtual com Clean Architecture, DDD e MongoDB",
+    "type": "project",
+    "license": "GPL-3.0-only",
+    "require": {
+        "php": "^8.1",
+        "mongodb/mongodb": "^1.15",
+        "laminas/laminas-diactoros": "^2.24",
+        "league/route": "^6.1",
+        "nikic/fast-route": "^1.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10",
+        "zircote/swagger-php": "^4.7",
+        "roave/security-advisories": "dev-latest"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cleanstore\\Kkg\\": "src/"
+        }
+    },
+    "scripts": {
+        "generate-docs": [
+            "php ./vendor/bin/openapi --output ./public/swagger.json ./src"
+        ]
+    }
+}
